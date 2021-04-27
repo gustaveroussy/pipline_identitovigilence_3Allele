@@ -25,10 +25,10 @@ public class Echantillion implements Serializable{
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	@Column(unique=true, nullable=false)
 	private int idechantillion; 
-	private String Nomechantillion;
+	private String nomechantillion;
 	private String nompatient;
 	private String prénompatient;
-	private int Depth;
+	private int nip;
 	
 	@ManyToOne ( fetch = FetchType . LAZY ) 
 	@JoinColumn ( name = "id_Run" )
@@ -48,10 +48,10 @@ public class Echantillion implements Serializable{
 					int depth, Run run, List<Snpechantillion> snpechantillions) {
 				super();
 				this.idechantillion = idechantillion;
-				Nomechantillion = nomechantillion;
+				this.nomechantillion = nomechantillion;
 				this.nompatient = nompatient;
 				this.prénompatient = prénompatient;
-				Depth = depth;
+				this.nip = nip;
 				this.run = run;
 //				this.snp_echantillions = snp_echantillions;
 			}
@@ -68,12 +68,12 @@ public class Echantillion implements Serializable{
 
 
 		public String getNom_echantillion() {
-			return Nomechantillion;
+			return nomechantillion;
 		}
 
 
 		public void setNom_echantillion(String nomechantillion) {
-			Nomechantillion = nomechantillion;
+			this.nomechantillion = nomechantillion;
 		}
 
 
@@ -95,17 +95,6 @@ public class Echantillion implements Serializable{
 		public void setPrénom_patient(String prénompatient) {
 			this.prénompatient = prénompatient;
 		}
-
-
-		public int getDepth() {
-			return Depth;
-		}
-
-
-		public void setDepth(int depth) {
-			Depth = depth;
-		}
-
 
 		public Run getRun() {
 			return run;
@@ -129,6 +118,16 @@ public class Echantillion implements Serializable{
 
 		public static long getSerialversionuid() {
 			return serialVersionUID;
+		}
+
+
+		public int getNip() {
+			return nip;
+		}
+
+
+		public void setNip(int nip) {
+			this.nip = nip;
 		}
 
 

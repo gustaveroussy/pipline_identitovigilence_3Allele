@@ -21,14 +21,30 @@ public class EchantillionServiceImpl implements EchantillionService{
 		
 	}
 	
-	@Override
-	public void save(Echantillion ech) {
-		echrepo.save(ech);		
-	}
-
+	
 	@Override
 	public List<Echantillion> getAllEchantillion() {
 		
 		return echrepo.findAll();
 	}
+
+	@Override
+	public void save(List<Echantillion> echs) {
+		echrepo.saveAll(echs);
+	}
+
+	@Override
+	public void saveone(Echantillion ch1) {
+		echrepo.save(ch1);
+		
+		
+	}
+
+
+	@Override
+	public Echantillion getBYnomech(String nomech) {
+		
+		return echrepo.findByNomechantillion(nomech);
+	}
+	
 }

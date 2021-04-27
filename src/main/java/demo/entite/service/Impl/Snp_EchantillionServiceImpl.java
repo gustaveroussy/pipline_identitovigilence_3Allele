@@ -7,9 +7,9 @@ import org.springframework.stereotype.Service;
 
 import demo.entite.Snpechantillion;
 import demo.entite.repository.Snp_echantillionRepo;
-import demo.entite.service.Snp_EchantillionService;
+import demo.entite.service.SnpEchantillionService;
 @Service
-public class Snp_EchantillionServiceImpl implements Snp_EchantillionService{
+public class Snp_EchantillionServiceImpl implements SnpEchantillionService{
 	private Snp_echantillionRepo snpechanrep;
 	@Autowired
 	
@@ -33,6 +33,13 @@ public class Snp_EchantillionServiceImpl implements Snp_EchantillionService{
 	public List<Snpechantillion> getbyidech(int ech) {
 		// TODO Auto-generated method stub
 		return snpechanrep.findByEchantillion_Idechantillion(ech);
+	}
+
+	@Override
+	public void save(List<Snpechantillion> listeEch) {
+		// TODO Auto-generated method stub
+		snpechanrep.saveAll(listeEch);
+		
 	}
 
 }

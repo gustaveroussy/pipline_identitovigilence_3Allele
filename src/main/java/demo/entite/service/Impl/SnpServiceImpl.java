@@ -35,10 +35,18 @@ public class SnpServiceImpl implements SnpService {
 		
 		return snprop.findByGene(gene);
 	}
+	
 
 	@Override
 	public void save(List<Snp> snp) {
 		snprop.saveAll(snp);
 		
+	}
+	
+
+	@Override
+	public Snp getBYchormosomeposition(String chromosome, int position) {
+		
+		return snprop.findByChromosomeAndPosition(chromosome, position) ;
 	}
 }

@@ -15,7 +15,7 @@ import demo.entite.Snpechantillion;
 import demo.entite.service.EchantillionService;
 import demo.entite.service.RunService;
 import demo.entite.service.SnpService;
-import demo.entite.service.Snp_EchantillionService;
+import demo.entite.service.SnpEchantillionService;
 
 @SpringBootTest
 class Projet1ApplicationTests {
@@ -27,7 +27,7 @@ class Projet1ApplicationTests {
 @Autowired
   SnpService snpservice;
 @Autowired
-  Snp_EchantillionService echsnpservice;
+  SnpEchantillionService echsnpservice;
 
 @Autowired
 SNPcontroller snpCOntroller;
@@ -55,11 +55,11 @@ SNPcontroller snpCOntroller;
 		
 	Echantillion ech = new Echantillion();
 		
-		ech.setDepth(1);
-		ech.setNom_echantillion("atsi");
+		ech.setNip(1);
+		ech.setIdechantillion(1);
 		ech.setNom_patient("bi");
 		ech.setPrénom_patient("");		
-		echservice.save(ech);
+		echservice.saveone(ech);
 		 
 		 //echservice.getAllEchantillion();
 		//System.out.println(ech);

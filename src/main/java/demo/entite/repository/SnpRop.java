@@ -10,4 +10,5 @@ import demo.entite.Snp;
 
 public interface SnpRop extends JpaRepository<Snp, Integer> {
 	public List <Snp> findByGene(String genename);
+	public Snp findByChromosomeAndPosition(String chromosome , int position);
 }

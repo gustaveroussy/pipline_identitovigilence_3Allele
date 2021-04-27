@@ -6,8 +6,11 @@ import demo.entite.Echantillion;
 
 public interface EchantillionService {
 
-	public void save(Echantillion ech);
+	public void save(List<Echantillion> echs);
+	
+	public void saveone(Echantillion ch1);
 	public List<Echantillion> getAllEchantillion();
+	public Echantillion getBYnomech(String nomech);
 	
 	
 	
