@@ -21,13 +21,11 @@ public class SNPcontroller {
 
 	@Autowired
 	SnpService snpSerivce;
-	
 	@GetMapping("/allSNP")
 	@ResponseBody
 	public List<Snp> getAllSnp() {
-			
 		return snpSerivce.getAllSnp();
-		
+
 	}
 	@GetMapping("/getsnpbygene")
 	@ResponseBody

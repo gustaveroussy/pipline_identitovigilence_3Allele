@@ -24,25 +24,20 @@ public class Run implements Serializable{
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	@Column(unique=true, nullable=false)
-	private int  idRun;
-	
+	private int  id;
 	private String nomrun;
-	
 	private Date daterun;
-	
-	@OneToMany(mappedBy="run") 
-	private List <Echantillion>Echantillions;
 
 	public Run() {
 		super();
 	}
 
-	public int getId_Run() {
-		return idRun;
+	public int getId() {
+		return id;
 	}
 
-	public void setId_Run(int id_Run) {
-		this.idRun = id_Run;
+	public void setId(int id) {
+		this.id = id;
 	}
 
 	public Date getDate_run() {
@@ -51,14 +46,6 @@ public class Run implements Serializable{
 
 	public void setDate_run(Date date_run) {
 		this.daterun = date_run;
-	}
-
-	public List<Echantillion> getEchantillions() {
-		return Echantillions;
-	}
-
-	public void setEchantillions(List<Echantillion> echantillions) {
-		Echantillions = echantillions;
 	}
 
 	public String getNomrun() {
@@ -71,7 +58,7 @@ public class Run implements Serializable{
 
 	@Override
 	public String toString() {
-		return "Run [id_Run=" + idRun + ", nomrun=" + nomrun + ", date_run=" + daterun + "]";
+		return "Run [id=" + id + ", nomrun=" + nomrun + ", daterun=" + daterun + "]";
 	}
 	
 }

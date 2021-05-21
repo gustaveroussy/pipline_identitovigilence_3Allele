@@ -23,11 +23,11 @@ public class Snp_EchantillionServiceImpl implements SnpEchantillionService{
 		
 	}
 
-//	@Override
-//	public List<Snp_echantillion> getAllsnp_echantillion() {
-//		
-//		return snpechanrep.findAll();
-//	}
+	@Override
+	public List<Snpechantillion> getAllsnpechantillion() {
+		
+		return snpechanrep.findAll();
+	}
 
 	@Override
 	public List<Snpechantillion> getbyidech(int ech) {

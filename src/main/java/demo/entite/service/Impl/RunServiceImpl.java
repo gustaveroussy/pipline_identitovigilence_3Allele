@@ -1,6 +1,7 @@
 package demo.entite.service.Impl;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -44,6 +45,23 @@ public class RunServiceImpl implements RunService {
 		return runrepo.findAll();
 	}
 
-	
+	@Override
+	public Run getBYnomrun(String nomrun) {
+		
+		return runrepo.findByNomrun(nomrun) ;
+	}
+
+	@Override
+	public void saveall(List<Run> run) {
+		 runrepo.saveAll(run);
+		
+	}
+
+	@Override
+	public Run getByIdRun(Integer id) {
+		Optional<Run> run = runrepo.findById(id);
+		return run.get();
+	}
+
 
 }

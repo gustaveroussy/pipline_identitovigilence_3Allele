@@ -8,8 +8,6 @@ import demo.entite.Echantillion;
 public interface EchantillionRepo extends JpaRepository<Echantillion, Integer>{
 	public Echantillion findByidechantillion(int idech);
 	public Echantillion findByNomechantillion(String nomech);
-	
-
 	//public Echantillion findBySNP_IdSnpANDEchantillion_idechantillion(int idSNP, int Idech);
 		
 }

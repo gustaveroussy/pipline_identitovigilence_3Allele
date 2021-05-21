@@ -30,6 +30,6 @@ EchantillionService echantillionservice;
 	public void saveEchs(@RequestBody @NonNull List<Echantillion> Echs) {
 		echantillionservice.save(Echs);
 	}
-	
+
 
 }

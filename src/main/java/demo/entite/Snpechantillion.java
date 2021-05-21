@@ -26,8 +26,7 @@ public class Snpechantillion implements Serializable{
 	  @GeneratedValue(strategy=GenerationType.AUTO)
 	  @Column(unique=true, nullable=false)
 	  private int id;
-	  
-	  private  String  nip;
+	  private int depth;
 	  private int Refcount;
 	  private int Altcount;
 	  private int Acount;
@@ -35,7 +34,7 @@ public class Snpechantillion implements Serializable{
 	  private int Gcount;
 	  private int Tcount;
 	  private int Ncount;
-	  
+	  private String refbase;
 	  @ManyToOne ( fetch = FetchType . LAZY ) 
 	   @JoinColumn ( name = "idSnp" ) 
 	   private  Snp snp; 
@@ -44,20 +43,14 @@ public class Snpechantillion implements Serializable{
 	   @JoinColumn ( name = "id_echantillion" ) 
 	   private Echantillion  echantillion ;
 
+
+
 	public int getId() {
 		return id;
 	}
 
 	public void setId(int id) {
 		this.id = id;
-	}
-
-	public String getNip() {
-		return nip;
-	}
-
-	public void setNip(String nip) {
-		this.nip = nip;
 	}
 
 	public int getRefcount() {
@@ -130,6 +123,29 @@ public class Snpechantillion implements Serializable{
 
 	public void setEchantillion(Echantillion echantillion) {
 		this.echantillion = echantillion;
-	} 
-	  
+	}
+
+	public int getDepth() {
+		return depth;
+	}
+
+	public void setDepth(int depth) {
+		this.depth = depth;
+	}
+
+	public String getRefbase() {
+		return refbase;
+	}
+
+	public void setRefbase(String string) {
+		this.refbase = string;
+	}
+
+	@Override
+	public String toString() {
+		return "Snpechantillion [id=" + id + ", depth=" + depth + ", Refcount=" + Refcount + ", Altcount=" + Altcount
+				+ ", Acount=" + Acount + ", Ccount=" + Ccount + ", Gcount=" + Gcount + ", Tcount=" + Tcount
+				+ ", Ncount=" + Ncount + ", refbase=" + refbase + "]";
+	}
+  
 }

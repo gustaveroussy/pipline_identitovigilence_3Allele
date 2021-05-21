@@ -12,6 +12,8 @@ public interface EchantillionService {
 	public List<Echantillion> getAllEchantillion();
 	public Echantillion getBYnomech(String nomech);
 	
+	public Echantillion getByID(Integer id);
+	
 	
 	
 	
