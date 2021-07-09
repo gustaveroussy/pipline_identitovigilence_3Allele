@@ -199,7 +199,7 @@ SNPcontroller snpCOntroller;
 			
 		}
 		
-		writter.close();
+		writter.close() ;
 		
 		BufferedWriter writterbis = new BufferedWriter(new OutputStreamWriter(new FileOutputStream("ratio/ratiotri.txt", true), StandardCharsets.UTF_8));
 		

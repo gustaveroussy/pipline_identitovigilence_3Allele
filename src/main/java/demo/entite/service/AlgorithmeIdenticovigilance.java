@@ -6,4 +6,6 @@ public interface AlgorithmeIdenticovigilance {
 
 	public Map<String, Double> calculerRatio();
 	
+	
+	
 }
